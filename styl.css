@@ -1,0 +1,143 @@
+* {
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+	background-color: rgb(255,255,255);
+	/*background: url('img/1.png') repeat;*/
+	font-family: Verdana, Arial, Tahoma, sans-serif;
+	font-size: 14px;
+	/*color: rgb(250,250,210);*/
+	color: rgb(0,0,0);
+	cursor: none;
+}
+
+#playerHUD {
+	width: 1000px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	z-index: 10;
+	-moz-user-select: -moz-none;
+   	-khtml-user-select: none;
+   	-webkit-user-select: none;
+   	-ms-user-select: none;
+   	user-select: none;
+}
+.player {
+	width: 300px;
+	height: 80px;
+	position: relative;
+	float: left;
+	margin: 0 25px 25px 0;
+}
+
+ul.stats {
+	list-style-type: none;
+	font-size: 10px;
+}
+ul.stats > li {
+	display: inline-block;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+	/*span.label { color: gray; }*/
+	/*span.var { color: red; }*/
+	span.maxvar { color: lightgray; }
+	div.bar { height:5px; background-color:gray; position: relative; bottom: 0px; }
+		.exp .bar { background-color: gold; }
+		.hp .bar { background-color: red; }
+		.mp .bar { background-color: blue; }
+
+	.icon {
+		position: absolute;
+		top:-15px;
+		left:0;
+	}
+	.lvl {
+		position: absolute;
+		top:-20px;
+		right:0;
+		font-size: 15px;
+		color: red;
+		letter-spacing: -2px;
+	} .lvl .label { font-size: 10px; letter-spacing: 0; }
+	.hp {
+		float:left;
+		clear:left;
+		width:100%;
+		height:20px;
+	}
+	.mp {
+		float:left;
+		clear:left;
+		width:100%;
+		height:20px;
+	}
+	.exp {
+		float:left;
+		clear:left;
+		width:100%;
+		height:20px;
+	}
+
+#pcanvas {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 9;
+}
+#mobcanvas {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 8;
+}
+
+
+#popup {
+		position: fixed;
+		background-color: rgba(255,255,255,0);
+		top:30px;
+		left:350px;
+		z-index:2;
+		-moz-user-select: -moz-none;
+	   	-khtml-user-select: none;
+	   	-webkit-user-select: none;
+	   	-ms-user-select: none;
+	   	user-select: none;
+	}
+	#popup div.ev {
+		position: absolute;
+		top:100px;
+		opacity:0;
+		font-size: 15px;
+		font-weight: bold;
+	}
+		#popup hp { color: red; }
+		#popup mp { color: blue; }
+		#popup lvlup { color: gold; }
+
+
+#pauseMask {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 100;
+	display: none;
+}
+	#pauseMask span {
+		margin: 300px auto 0 auto;
+		width:200px;
+		height:50px;
+		font-size: 30px;
+		color: gold;
+	}

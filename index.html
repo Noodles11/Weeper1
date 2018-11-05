@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>RPG</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" href="styl.css" type="text/css" />
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="system.js"></script>
+	<script type="text/javascript" src="player.js"></script>
+	<script type="text/javascript" src="mobs.js"></script>
+	<script type="text/javascript" src="logger.js"></script>
+	<script type="text/javascript" src="buttons.js"></script>
+	
+</head>
+<body>
+
+<canvas id="pcanvas"></canvas>
+<canvas id="mobcanvas"></canvas>
+<div id="pauseMask"><span></span></div>
+
+<div id="playerHUD">
+	<div class="player" id="player_blank" style="display:none;">
+		<ul class="stats">
+			<li class="icon">NICK</li>
+			<li class="lvl"><span class="label">LVL: </span><span class="var">1</span></li>
+			<li class="hp"><span class="label">HP: </span><span class="var">100</span> /<span class="maxvar">100</span><div class="bar">&nbsp;</div></li>
+			<li class="mp"><span class="label">MP: </span><span class="var">50</span> /<span class="maxvar">50</span><div class="bar">&nbsp;</div></li>
+			<li class="exp"><span class="label">EXP: </span><span class="var">0</span> /<span class="maxvar">100</span><div class="bar">&nbsp;</div></li>
+		</ul>
+	</div>
+</div>
+
+<div id="popup"></div>
+
+</body>
+</html>
